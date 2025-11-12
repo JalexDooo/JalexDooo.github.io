@@ -37,6 +37,7 @@ abstract: Liver cancer has a high mortality rate and is a serious threat to huma
 tags:
 - /unread
 - /未读
+featured: True
 links:
 - name: URL
   url: https://link.springer.com/10.1007/s10278-025-01698-x
