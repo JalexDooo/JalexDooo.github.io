@@ -5,13 +5,11 @@ date: 2025-5-27
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
-image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+# image:
+#   caption: 'Image credit: [**SCALPEL**](https://github.com/JalexDooo/SCALPEL)'
 
 authors:
-  - Jindong Sun
-  - Suiru Lu
-  - SunLab
+  - admin
 
 tags:
   - Academic
@@ -73,22 +71,6 @@ SCALPEL significantly outperforms existing models, and, most importantly, enable
 - 🔁 Accurately predict on-target effects of gRNAs
 - 🎯 Assist in designing high-specificity gRNAs for different cellular context
 - 🔬 Facilitate the design of gRNAs for animal models
-
-
-
----
-
-## 📁 Repository Overview
-```
-.
-├── dataset/                 # PyTorch dataloader and pre-processing.
-├── ckpt/                    # PyTorch training model weights.
-├── models/                  # SCALPEL model architecture.
-├── other_model_data/        # Training data path.
-├── loss_functions/          # Optional loss function.
-├── logicArchi.py            # Main.
-```
----
 
 ## ⚙️ Environment Setup && 🚀 Quick Start
 
