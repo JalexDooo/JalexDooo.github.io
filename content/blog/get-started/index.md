@@ -1,7 +1,7 @@
 ---
-title: 🎉 Easily create your own simple yet highly customizable blog
-summary: Take full control of your personal brand and privacy by migrating away from the big tech platforms!
-date: 2023-10-27
+title: 🎉 Our new research - SCALPEL S͎pecific CRISPR-C͎as13d gRNA͎ design through deep L͎earning P͎rediction using in vivo E͎xperimentaL͎ RNA structure and binding information
+summary: Deciphering cellular context for efficient and cell type-specific CRISPR-Cas13d gRNA design using in vivo RNA structure and deep learning!
+date: 2025-5-27
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
@@ -9,12 +9,12 @@ image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 
 authors:
-  - admin
-  - Ted
+  - Jindong Sun
+  - Suiru Lu
+  - SunLab
 
 tags:
   - Academic
-  - Hugo Blox
   - Markdown
 
 content_meta:
@@ -25,77 +25,157 @@ Welcome 👋
 
 {{< toc mobile_only=true is_open=true >}}
 
-## Overview
+# 🧬 SCALPEL: S͎pecific CRISPR-C͎as13d gRNA͎ design through deep L͎earning P͎rediction using *in vivo* E͎xperimentaL͎ RNA structure and binding information
 
-1. The Hugo Blox website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site
-2. The template can be modified and customised to suit your needs. It's a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a **no-code solution (write in Markdown and customize with YAML parameters)** and having **flexibility to later add even deeper personalization with HTML and CSS**
-3. You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more
+<p align="left">
+  <a href="https://github.com/JalexDooo/SCALPEL">
+    <img src="https://img.shields.io/badge/SCAPEL-python-orange">
+  </a>
+  <a href="https://github.com/JalexDooo/SCALPEL/stargazers">
+    <img src="https://img.shields.io/github/stars/JalexDooo/SCALPEL">
+  </a>
+  <a href="https://github.com/JalexDooo/SCALPEL/network/members">
+    <img src="https://img.shields.io/github/forks/JalexDooo/SCALPEL">
+  </a>
+  <a href="https://github.com/JalexDooo/SCALPEL/issues">
+    <img src="https://img.shields.io/github/issues/JalexDooo/SCALPEL">
+  </a>
+  <a href="https://github.com/JalexDooo/SCALPEL/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/JalexDooo/SCALPEL">
+  </a>
+  <!-- <a href="https://zenodo.org/badge/latestdoi/626892172">
+    <img src="https://zenodo.org/badge/626892172.svg" alt="DOI">
+  </a> -->
+</p>
 
-[//]: # '[![The template is mobile first with a responsive design to ensure that your site looks stunning on every device.](https://raw.githubusercontent.com/HugoBlox/hugo-blox-builder/main/templates/academic-cv/preview.png)](https://hugoblox.com)'
+**Official Implementation of SCALPEL – Deciphering cellular context for efficient and cell type-specific CRISPR-Cas13d gRNA design using *in vivo* RNA structure and deep learning**
 
-### Get Started
+![SCALPEL Architecture](https://github.com/JalexDooo/SCALPEL/Figs/model.png)
 
-> [!TIP]+ Quick Start Guide
-> New to Hugo Blox? Follow these steps to get your site up and running in minutes!
+## 📖 Abstract
+The efficacy and tissue specificity of RNA therapeutics are critical for clinical translation. Here, by large-scale profiling of the dynamic RNA structurome across four cell lines, we systematically characterized the impact of **_in vivo_ target RNA structure** and **RNA-protein interactions** on CRISPR/Cas13d gRNA activity. We identified the structural patterns of high-efficacy gRNA targets and observed that structural differences can lead to variations in efficacy across different cellular contexts. By stabilizing single-stranded structure, RNA-binding proteins also enhanced gRNA efficacy.
 
-- 👉 [**Create a new site**](https://hugoblox.com/templates/)
-- 📚 [**Personalize your site**](https://docs.hugoblox.com/)
-- 💬 [Chat with the **Hugo Blox community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@GetResearchDev](https://x.com/BuildLore) [@GeorgeCushen](https://twitter.com/GeorgeCushen) #MadeWithHugoBlox
-- 💡 [Request a **feature** or report a **bug** for _Hugo Blox_](https://github.com/HugoBlox/hugo-blox-builder/issues)
-- ⬆️ **Updating Hugo Blox?** View the [Update Guide](https://docs.hugoblox.com/reference/update/) and [Release Notes](https://github.com/HugoBlox/hugo-blox-builder/releases)
+ Leveraging this cell context information, along with approximately 290,000 RfxCas13d screening data, we developed SCALPEL, a deep learning model that predicts gRNA performance across various cellular environments. SCALPEL integrates:
 
-> [!IMPORTANT]
-> Remember to backup your site before making major updates!
+- **Both target and gRNA sequence**
+- **_In vivo_ icSHAPE data acorss different cell lines**
+- **Cell type-specific RBP binding profiles**
 
-## Crowd-funded open-source software
+SCALPEL significantly outperforms existing models, and, most importantly, enables **cell type-specific prediction** of gRNA activity. Validation screens across multiple cell lines demonstrate that cellular context significantly influences gRNA performance, even for identical targeting sequences, underscoring the feasibility of **cell type-specific knockdown** by targeting structural dynamic regions. SCALPEL can also facilitate designing highly efficient virus-targeting gRNAs and gRNAs that robustly knockdown maternal transcripts essential for early zebrafish development. Our method offers a novel approach to develop context-specific gRNAs, with potential to advance **tissue-** or **organ-specific** RNA therapies.
 
-To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.
+---
 
-### [❤️ Click here to become a sponsor and help support Hugo Blox's future ❤️](https://hugoblox.com/sponsor/)
+## 🧠 Key Features
 
-As a token of appreciation for sponsoring, you can **unlock [these](https://hugoblox.com/sponsor/) awesome rewards and extra features 🦄✨**
 
-## Ecosystem
+- 🧬 Integrating *in vivo* RNA secondary structure data and cell type-specific RBP binding profile
+- 🧠 Transformer-based architecture for context modeling
+- 🔁 Accurately predict on-target effects of gRNAs
+- 🎯 Assist in designing high-specificity gRNAs for different cellular context
+- 🔬 Facilitate the design of gRNAs for animal models
 
-- **[Bibtex To Markdown](https://github.com/GetRD/academic-file-converter):** Automatically import publications from BibTeX
 
-## Inspiration
 
-[Learn what other **creators**](https://hugoblox.com/creators/) are building with this template.
+---
 
-## Features
+## 📁 Repository Overview
+```
+.
+├── dataset/                 # PyTorch dataloader and pre-processing.
+├── ckpt/                    # PyTorch training model weights.
+├── models/                  # SCALPEL model architecture.
+├── other_model_data/        # Training data path.
+├── loss_functions/          # Optional loss function.
+├── logicArchi.py            # Main.
+```
+---
 
-> [!NOTE]+ Enhanced Markdown Support  
-> Hugo Blox now supports GitHub and Obsidian-style callouts! Use standard Markdown alert syntax like `> [!NOTE]` for better portability.
+## ⚙️ Environment Setup && 🚀 Quick Start
 
-- **Page builder** - Create _anything_ with no-code [**blocks**](https://hugoblox.com/blocks/) and [**elements**](https://docs.hugoblox.com/reference/markdown/)
-- **Edit any type of content** - Blog posts, publications, talks, slides, projects, and more!
-- **Create content** in [**Markdown**](https://docs.hugoblox.com/reference/markdown/), [**Jupyter**](https://docs.hugoblox.com/getting-started/cms/), or [**RStudio**](https://docs.hugoblox.com/getting-started/cms/)
-- **Plugin System** - Fully customizable [**color** and **font themes**](https://docs.hugoblox.com/getting-started/customize/)
-- **Display Code and Math** - Code syntax highlighting and LaTeX math supported
-- **Integrations** - [Google Analytics](https://analytics.google.com), [Disqus commenting](https://disqus.com), Maps, Contact Forms, and more!
-- **Beautiful Site** - Simple and refreshing one-page design
-- **Industry-Leading SEO** - Help get your website found on search engines and social media
-- **Media Galleries** - Display your images and videos with captions in a customizable gallery
-- **Mobile Friendly** - Look amazing on every screen with a mobile friendly version of your site
-- **Multi-language** - 35+ language packs including English, 中文, and Português
-- **Multi-user** - Each author gets their own profile page
-- **Privacy Pack** - Assists with GDPR
-- **Stand Out** - Bring your site to life with animation, parallax backgrounds, and scroll effects
-- **One-Click Deployment** - No servers. No databases. Only files.
+**Step 0**: Download the pre-trained BERT model at <a href="https://drive.google.com/drive/folders/1UfnmEOYFOm4fY8975KfVqlVn0kRP59fo?usp=drive_link" target="_blank" rel="noopener noreferrer">Google Drive</a>. Putting them in root directory.
 
-> [!WARNING]+ Version Requirements  
-> The new Markdown alert syntax requires Hugo v0.132.0 or later. Make sure you're using a compatible version!
+**Step 1**: Prepare Input Data Like `other_model_data/ours/demo_data.csv` file. The icSHAPE sequencing data for all cell lines reported in this study have been deposited in the NCBI Gene Expression Omnibus (GEO) with accession number GSE301234. The validation screening sequencing data for all libraries are available in GEO under accession number GSE30081. These sequencing data have also been deposited in National Genomics Data Center (NGDC) the with accession number PRJCA042228.
+- RNA sequences
+- icSHAPE reactivity profiles
+- RBP-binding tracks or matrices from <a href="https://www.nature.com/articles/s41422-021-00476-y" target="_blank" rel="noopener noreferrer">PrismNet</a>.
+- Other features.
 
-## Themes
+**Step 2**: Install python requirements in `requirements.txt` (Python3.9).
 
-Hugo Blox and its templates come with **automatic day (light) and night (dark) mode** built-in. Visitors can choose their preferred mode by clicking the sun/moon icon in the header.
+**Step 3**: Train SCALPEL.
 
-[Choose a stunning **theme** and **font**](https://docs.hugoblox.com/getting-started/customize/) for your site. Themes are fully customizable.
+ - The `model_des` can be configured to include sequence features along with any other features.
+ - The `data_des` can be configured as `cell_line:{}`, `match[i]`, `random`, `target_gene` referring to the `train.sh` file for specific usage.
+ - It should be noted that you need to modify the paths that appear in the code, especially the `origin` path in the `control` function under `logicArchi.py`. This path points to all the data files. According to our strategy, we perform different normalization for each gene based on all the data.
+```
+python3 -u logicArchi.py control --gpu_ids=[0] --model_des='seq_bert_fold_mfe1_mfe2_icshape_binding_relatelen_utrrate' --data_des='random' --model='SCALPEL' --dataset='BertOnehotLoader30' --lr=1e-3 --data_path='other_model_data/ours/demo_data.csv'
+```
+**Step 4**: Predict gRNA Efficacy referring to the `val.sh` file for specific usage.
+```
+python3 -u logicArchi.py val --gpu_ids=[0] --model_des='seq_bert_fold_mfe1_mfe2_icshape_binding_relatelen_utrrate' --data_des='random' --model='SCALPEL' --dataset='BertOnehotLoader30' --data_path={Your validation file path}
+```
 
-## License
+## 📊 Results
 
-Copyright 2016-present [George Cushen](https://georgecushen.com).
+<p align="center">
+  <img src="https://github.com/JalexDooo/SCALPEL/Figs/res1.jpg" alt="Fig.1" width="350"/>
+</p>
 
-Released under the [MIT](https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md) license.
+<p align="center">
+  Fig.1 <i>In vivo</i> information, including cell type-specific target RNA structure and protein binding probability (which also depend on cell type-specific structural data), significantly improves model performance when analyzing the impact of different features.
+</p>
+
+<p align="center">
+  <img src="https://github.com/JalexDooo/SCALPEL/Figs/res2.jpg" alt="Fig.2" width="500"/>
+</p>
+
+<p align="center">
+  Fig.2 In our validation screen, SCALPEL performed exceptionally well in predicting gRNAs with significantly dynamic efficacy.
+</p>
+
+---
+
+## 🙏 Acknowledgements
+
+We sincerely thank the following contributors and institutions for their support:
+
+- **Collaborating Labs and Institutes**  
+  We thank all members in <a href="https://rnalab.cn" target="_blank" rel="noopener noreferrer">Sunlab</a> at Shandong University for providing insightful discussions.
+
+- **Funding Support**
+  This work was supported by the National Natural Science Foundation of China (No.32300521, No.32422013 and No.82341086); the Open Grant from the Pingyuan Laboratory (No.2023PY-OP-0104); the State Key Laboratory of Microbial Technology Open Projects Fund (No.M2023-20; the Intramural Joint Program Fund of the State Key Laboratory of Microbial Technology (NO.SKLMTIJP-2024-02); the Double-First Class Initiative of Shandong University School of Life Sciences; the Young Innovation Team of Shandong Higher Education Institutions, the Taishan Scholars Youth Expert Program of Shandong Province, and the Program of Shandong University Qilu Young Scholars.
+
+- **Open-source Tools**  
+  This project builds upon many open-source tools and libraries, including PyTorch, Scikit-learn, and Biopython.
+
+Special thanks to all community members and beta testers who provided feedback during model development and validation in Sunlab.
+
+## 📚 Related Publication
+
+[1] Cheng, Xiaolong, et al. "Modeling CRISPR-Cas13d on-target and off-target effects using machine learning approaches." *Nature communications* 14.1 (2023): 752.
+
+[2] Wei, Jingyi, et al. "Deep learning and CRISPR-Cas13d ortholog discovery for optimized RNA targeting." *Cell Systems* 14.12 (2023): 1087-1102.
+
+[3] Wessels, Hans-Hermann, et al. "Prediction of on-target and off-target activity of CRISPR–Cas13d guide RNAs using deep learning." *Nature biotechnology* 42.4 (2024): 628-637.
+
+[4] Zhu, Haoran, et al. "Dynamic characterization and interpretation for protein-RNA interactions across diverse cellular conditions using HDRNet." Nature Communications 14.1 (2023): 6824.
+
+[5] Yin, Weijie, et al. "Ernie-rna: An rna language model with structure-enhanced representations." bioRxiv (2024): 2024-03.
+
+## 🧾 Citation
+
+If you use this work in your research, please cite:
+```
+@article{lu2025scalpel,
+  title={Deciphering Cellular Context for Efficient and Cell-Type Specific CRISPR-Cas13d gRNA Design using *in vivo* RNA structure and deep learning},
+  author={**},
+  journal={**},
+  year={2025},
+  note={**}
+}
+```
+
+## 📄 License
+This project is covered under the **MIT License**.
+
+Thank you for using SCALPEL! Any questions, suggestions or advice are welcome!
