@@ -22,17 +22,13 @@ content_meta:
 <p align="left">
   <a href="https://github.com/JalexDooo/SCALPEL">
     <img src="https://img.shields.io/badge/SCAPEL-python-orange">
-  </a>
-  <a href="https://github.com/JalexDooo/SCALPEL/stargazers">
+  </a><a href="https://github.com/JalexDooo/SCALPEL/stargazers">
     <img src="https://img.shields.io/github/stars/JalexDooo/SCALPEL">
-  </a>
-  <a href="https://github.com/JalexDooo/SCALPEL/network/members">
+  </a><a href="https://github.com/JalexDooo/SCALPEL/network/members">
     <img src="https://img.shields.io/github/forks/JalexDooo/SCALPEL">
-  </a>
-  <a href="https://github.com/JalexDooo/SCALPEL/issues">
+  </a><a href="https://github.com/JalexDooo/SCALPEL/issues">
     <img src="https://img.shields.io/github/issues/JalexDooo/SCALPEL">
-  </a>
-  <a href="https://github.com/JalexDooo/SCALPEL/blob/master/LICENSE">
+  </a><a href="https://github.com/JalexDooo/SCALPEL/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/JalexDooo/SCALPEL">
   </a>
 </p>
@@ -83,24 +79,6 @@ python3 -u logicArchi.py control --gpu_ids=[0] --model_des='seq_bert_fold_mfe1_m
 ```
 python3 -u logicArchi.py val --gpu_ids=[0] --model_des='seq_bert_fold_mfe1_mfe2_icshape_binding_relatelen_utrrate' --data_des='random' --model='SCALPEL' --dataset='BertOnehotLoader30' --data_path={Your validation file path}
 ```
-
-## 📊 Results
-
-<p align="center">
-  <img src="https://github.com/JalexDooo/SCALPEL/tree/main/Figs/res1.jpg" alt="Fig.1" width="350"/>
-</p>
-
-<p align="center">
-  Fig.1 <i>In vivo</i> information, including cell type-specific target RNA structure and protein binding probability (which also depend on cell type-specific structural data), significantly improves model performance when analyzing the impact of different features.
-</p>
-
-<p align="center">
-  <img src="https://github.com/JalexDooo/SCALPEL/tree/main/Figs/res2.jpg" alt="Fig.2" width="500"/>
-</p>
-
-<p align="center">
-  Fig.2 In our validation screen, SCALPEL performed exceptionally well in predicting gRNAs with significantly dynamic efficacy.
-</p>
 
 
 ## 🙏 Acknowledgements
