@@ -34,8 +34,10 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'jdsun@sdust.edu.cn'
+    url: jdsun@sdust.edu.cn
     label: E-mail Me
+  - icon: brands/weichat
+    url: https://github.com/JalexDooo
   - icon: brands/x
     url: https://twitter.com/JontySun13756
   - icon: brands/github
@@ -167,4 +169,4 @@ languages:
 #       Recognized for contributions to scaling laws in deep learning.
 ---
 
-Jindong Sun, PhD, Shandong University of Science and Technology. In the past four years, he has published 6 SCI papers as first/corresponding author (including co-authors), which have been cited over 350 times, and more than 10 other SCI papers. His main research interests are segmentation and image reconstruction of brain tumors, using artificial intelligence methods to perform pathological segmentation of brain tumors from 3D data such as CT and MRI, determine the tumor life cycle status, and reconstruct brain images using fast MRI. His latest research, in collaboration with Professor Lei Sun's research group at Shandong University, uses 29 weeks of RfxCas13d data to design the deep learning method SCALPEL to accurately predict the targeting effects of gRNA biomarkers. He has designed and completed a series of rich biological experiments to design highly efficient viral targeting gRNAs and gene editing targeting effects, providing inspiration for drug design.
+Jindong Sun, PhD, Shandong University of Science and Technology. In the past four years, he has published 12 SCI papers as first/corresponding author (including co-authors), which have been cited over 350 times, and more than 10 other SCI papers. His main research interests are segmentation and image reconstruction of brain tumors, using artificial intelligence methods to perform pathological segmentation of brain tumors from 3D data such as CT and MRI, determine the tumor life cycle status, and reconstruct brain images using fast MRI. His latest research, in collaboration with Professor Lei Sun's research group at Shandong University, uses 29 weeks of RfxCas13d data to design the deep learning method SCALPEL to accurately predict the targeting effects of gRNA biomarkers. He has designed and completed a series of rich biological experiments to design highly efficient viral targeting gRNAs and gene editing targeting effects, providing inspiration for drug design.
