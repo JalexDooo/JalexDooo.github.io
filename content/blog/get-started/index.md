@@ -1,5 +1,5 @@
 ---
-title: 🎉 Our new research SCALPEL
+title: 🎉 Easily create your own simple yet highly customizable blog
 summary: Take full control of your personal brand and privacy by migrating away from the big tech platforms!
 date: 2025-5-17
 
@@ -10,7 +10,7 @@ image:
 
 authors:
   - admin
-  - Suiru Lu
+  - Suiru
 
 tags:
   - Academic
