@@ -19,17 +19,17 @@ content_meta:
   trending: true
 ---
 
-<p align="left">
-  <a href="https://github.com/JalexDooo/SCALPEL" style="display:inline; margin-right:.5rem; padding:0; line-height:1.2">
+<p align="right">
+  <a href="https://github.com/JalexDooo/SCALPEL">
     <img src="https://img.shields.io/badge/SCAPEL-python-orange">
   </a>
-  <a href="https://github.com/JalexDooo/SCALPEL/network/members" style="display:inline; margin-right:.5rem; padding:0; line-height:1.2">
+  <a href="https://github.com/JalexDooo/SCALPEL/network/members">
     <img src="https://img.shields.io/github/forks/JalexDooo/SCALPEL">
   </a>
-  <a href="https://github.com/JalexDooo/SCALPEL/issues" style="display:inline; margin-right:.5rem; padding:0; line-height:1.2">
+  <a href="https://github.com/JalexDooo/SCALPEL/issues">
     <img src="https://img.shields.io/github/issues/JalexDooo/SCALPEL">
   </a>
-  <a href="https://github.com/JalexDooo/SCALPEL/blob/master/LICENSE" style="display:inline; margin-right:.5rem; padding:0; line-height:1.2">
+  <a href="https://github.com/JalexDooo/SCALPEL/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/JalexDooo/SCALPEL">
   </a>
 </p>
