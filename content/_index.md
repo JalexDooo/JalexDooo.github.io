@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Home Page
-        url: https://znzb.sdust.edu.cn/info/1083/4565.htm
+        url: https://github.com/JalexDooo #https://znzb.sdust.edu.cn/info/1083/4565.htm
       headings:
         about: ''
         education: ''
