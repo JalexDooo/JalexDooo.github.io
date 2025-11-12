@@ -1,7 +1,7 @@
 ---
-title: 🎉 Our new research
-summary: Deciphering cellular context for efficient and cell type-specific CRISPR-Cas13d gRNA design using in vivo RNA structure and deep learning!
-date: 2025-5-27
+title: 🎉 Easily create your own simple yet highly customizable blog
+summary: Take full control of your personal brand and privacy by migrating away from the big tech platforms!
+date: 2023-10-27
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
