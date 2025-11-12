@@ -1,13 +1,13 @@
 ---
 # Display name
-title: Alex Johnson
+title: JINDONG SUN
 
 # Name pronunciation (optional)
 name_pronunciation: ''
 
 # Full name (for SEO)
-first_name: Alex
-last_name: Johnson
+first_name: Jindong
+last_name: Sun
 
 # Pronouns (optional)
 pronouns: he/him
@@ -23,27 +23,27 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Senior AI Research Scientist
+role: Ph.D & Lecturer
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: Shandong University of Science and Technology
+    url: https://www.sdust.edu.cn
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:alex.johnson@meta.com'
+    url: 'jdsun@sdust.edu.cn'
     label: E-mail Me
   - icon: brands/x
-    url: https://twitter.com/AlexAIResearch
+    url: https://twitter.com/JontySun13756
   - icon: brands/github
-    url: https://github.com/alexjohnsonai
+    url: https://github.com/JalexDooo
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnsonai/
+    url: https://www.linkedin.com/in/jindong-sun-2095a5347/
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=alexjohnson
+    url: https://scholar.google.com/citations?user=91rGZecAAAAJ&hl=en
   - icon: academicons/orcid
     url: https://orcid.org/0000-0002-1825-0097
 
