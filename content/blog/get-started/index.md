@@ -1,5 +1,5 @@
 ---
-title: 🎉 Our new research - SCALPEL
+title: 🎉 Our new research `SCALPEL`
 summary: Take full control of your personal brand and privacy by migrating away from the big tech platforms!
 date: 2025-5-17
 
