@@ -35,8 +35,9 @@ abstract: The accurate and robust automatic segmentation of cardiac structures i
   the view of the Dice scores and segmentation results, the multiscale feature attentive
   U-Net method is one of effective methods in segmenting cardiac MRI structures.
 tags:
-- /unread
-- /未读
+- Medical Image Segmentation
+- U-shaped Neural Network
+- Cardiac
 links:
 - name: URL
   url: https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/ipr2.12406

@@ -34,8 +34,9 @@ abstract: Abstract Quantification of the cardiac function is vital for diagnosin
   metric results and at the same time produces visualized segmentation results that
   are conducive to later analysis.
 tags:
-- /unread
-- /未读
+- Medical Image Quantification
+- U-shaped Neural Network
+- Cardiac
 links:
 - name: URL
   url: https://www.nature.com/articles/s41598-023-40841-y

@@ -39,8 +39,9 @@ abstract: Automated segmentation of cardiac pathology in MRI plays a signiﬁcan
   could better fuse complementary information to improve the segmentation performance
   of cardiac pathology.
 tags:
-- /unread
-- /未读
+- Medical Image Segmentation
+- U-shaped Neural Network
+- Cardiac
 links:
 - name: URL
   url: https://link.springer.com/10.1007/s40747-022-00660-6

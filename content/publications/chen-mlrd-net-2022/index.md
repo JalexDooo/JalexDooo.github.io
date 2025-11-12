@@ -34,8 +34,9 @@ abstract: The precise segmentation of multimodal MRI images is the primary stage
   demonstrate that our method is powerful and reliable. It increases little model
   complexity while achieving very competitive performance.
 tags:
-- /unread
-- /未读
+- Medical Image Segmentation
+- U-shaped Neural Network
+- Brain
 links:
 - name: URL
   url: https://link.springer.com/10.1007/s11517-022-02673-2

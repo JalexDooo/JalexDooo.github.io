@@ -32,8 +32,9 @@ abstract: Segmentation of multimodal brain tissues from 3D medical images is of 
   tool to studies of medical images of brain tumors. Our code is available at https://github.com/JalexDooo/
   BrainstormTS.
 tags:
-- /unread
-- /未读
+- Medical Image Segemntation
+- U-shaped Neural Network
+- Brain
 links:
 - name: URL
   url: https://linkinghub.elsevier.com/retrieve/pii/S0925231220315733

@@ -34,8 +34,9 @@ abstract: 'Accurate early glaucoma detection is crucial to prevent further visio
   generalization: it can effectively overcome domain shift and accurately detect glaucoma
   from multi-ethnic fundus images.'
 tags:
-- /unread
-- /未读
+- Medical Image Detection
+- The Residual Network
+- glaucoma
 links:
 - name: URL
   url: https://link.springer.com/10.1007/s00521-022-07078-8

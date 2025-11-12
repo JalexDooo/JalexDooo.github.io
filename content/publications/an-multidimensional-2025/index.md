@@ -35,9 +35,10 @@ abstract: Liver cancer has a high mortality rate and is a serious threat to huma
   balanced F1 scores, Cohen_Kappa, accuracy, and area under curve of 0.781, 0.731,
   0.779, and 0.944, respectively.
 tags:
-- /unread
-- /未读
-featured: True
+- Medical Image Classification
+- U-shaped Neural Network
+- Liver
+featured: False
 links:
 - name: URL
   url: https://link.springer.com/10.1007/s10278-025-01698-x

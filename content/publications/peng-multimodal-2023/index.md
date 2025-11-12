@@ -27,8 +27,9 @@ abstract: Multimodal glioma images provide different features of tumor boundarie
   tumor (ET) on the BraTS20 dataset. The experimental results showed good performance
   with the AD-Net network.
 tags:
-- /unread
-- /未读
+- Medical Image Segmentation
+- U-shaped Neural Network
+- Brain
 links:
 - name: URL
   url: https://linkinghub.elsevier.com/retrieve/pii/S174680942200790X

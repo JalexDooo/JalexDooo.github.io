@@ -14,8 +14,10 @@ publication_types:
 publication: '*Head and Neck Tumor Segmentation and Outcome Prediction*'
 doi: 10.1007/978-3-030-98253-9_2
 tags:
-- /unread
-- /未读
+- Medical Image Segmentation
+- U-shaped Neural Network
+- Neck
+featured: False
 links:
 - name: URL
   url: https://link.springer.com/10.1007/978-3-030-98253-9_2

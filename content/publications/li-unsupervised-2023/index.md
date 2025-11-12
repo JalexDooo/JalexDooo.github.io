@@ -36,8 +36,9 @@ abstract: Deep neural networks have recently been succeessful in the ﬁeld of m
   methods. Furthermore, ablation experiments are conducted to conﬁrm the effectiveness
   of our framework.
 tags:
-- /unread
-- /未读
+- Medical Image Segmentation
+- U-shaped Neural Network
+- Cardiac
 links:
 - name: URL
   url: https://link.springer.com/10.1007/s11517-023-02833-y

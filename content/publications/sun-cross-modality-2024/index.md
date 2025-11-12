@@ -30,8 +30,10 @@ abstract: Glioma, the highly lethal malignant brain tumor originating from abnor
   of glioma patients in the short, medium, and long term on the BraTS20 dataset, outperforming
   state-of-the-art methods.
 tags:
-- /unread
-- /未读
+- Medical Image Survival Prediction
+- GNN
+- Brain
+featured: True
 links:
 - name: URL
   url: https://linkinghub.elsevier.com/retrieve/pii/S0957417424012600

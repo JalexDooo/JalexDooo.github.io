@@ -33,8 +33,10 @@ abstract: Magnetic Resonance Imaging (MRI) and Computed Tomography (CT) are comm
   modality synthesis tasks. The proposed method outperforms existing generative adversarial
   models applied to medical image synthesis.
 tags:
-- /unread
-- /未读
+- Medical Image Generation
+- GAN
+- Brain
+featured: True
 links:
 - name: URL
   url: https://linkinghub.elsevier.com/retrieve/pii/S095070512300552X

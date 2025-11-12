@@ -32,8 +32,10 @@ abstract: Precise segmentation of the hippocampus is essential for various human
   DMCA-GAN obtained a DSC of 90.53% on the Medical Segmentation Decathlon (MSD) dataset
   with tenfold cross-validation, which is superior to the backbone by 3.78%.
 tags:
-- /unread
-- /未读
+- Medical Image Segmentation
+- GAN
+- Hippocampus
+featured: False
 links:
 - name: URL
   url: https://link.springer.com/10.1007/s10278-023-00854-5

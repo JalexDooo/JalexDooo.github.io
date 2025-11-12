@@ -27,8 +27,9 @@ abstract: Gliomas are the most common brain tumors, which have a high mortality.
   to improve performance in building model. Our proposed method is inherently general
   and is a powerful tool to studies of medical images of brain tumors.
 tags:
-- /unread
-- /已读
+- Medical Image Segmentation
+- U-shaped Neural Network
+- Brain
 links:
 - name: URL
   url: http://link.springer.com/10.1007/978-3-030-72084-1_24
