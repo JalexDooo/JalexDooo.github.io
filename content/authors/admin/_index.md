@@ -1,6 +1,6 @@
 ---
 # Display name
-title: JINDONG SUN
+title: Jindong Sun
 
 # Name pronunciation (optional)
 name_pronunciation: ''
@@ -45,61 +45,59 @@ profiles:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=91rGZecAAAAJ&hl=en
   - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://orcid.org/0000-0003-2288-4348
 
 interests:
-  - Large Language Models
-  - Computer Vision
+  - Medical Image Analysis
+  - Deep Learning
   - Reinforcement Learning
   - AI Ethics
 
 education:
-  - area: PhD Computer Science (AI Focus)
-    institution: Stanford University
+  - area: PhD Computer Science
+    institution: Shandong University of Science and Technology
     icon: ""
-    date_start: 2015-09-01
-    date_end: 2019-06-30
+    date_start: 2018-09-01
+    date_end: 2024-06-30
     summary: |
-      Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com/thesis.pdf'
-  - area: MS Computer Science
-    institution: Carnegie Mellon University
-    icon: ""
-    date_start: 2013-09-01
-    date_end: 2015-05-31
-    summary: |
-      GPA: 4.0/4.0
+      Research on Key Technologies for Survival Prediction of Brain Glioma Based on Deep Learning. Supervised by Prof. Yanjun Peng.
+    # button:
+    #   text: 'Read Thesis'
+    #   url: 'https://example.com/thesis.pdf'
+  # - area: MS Computer Science
+  #   institution: Carnegie Mellon University
+  #   icon: ""
+  #   date_start: 2013-09-01
+  #   date_end: 2015-05-31
+  #   summary: |
+  #     GPA: 4.0/4.0
 
-      Specialized in machine learning and robotics.
-  - area: BS Computer Science
-    institution: MIT
+  #     Specialized in machine learning and robotics.
+  - area: BS Software Engineering
+    institution: Shandong University of Science and Technology
     icon: ""
-    date_start: 2009-09-01
-    date_end: 2013-05-31
+    date_start: 2014-09-01
+    date_end: 2018-06-30
     summary: |
-      GPA: 3.9/4.0
-
-      Minored in Mathematics. President of AI Club.
+      2015 ACM-ICPC Broze Award.
 
 work:
-  - position: Senior AI Research Scientist
-    company_name: Meta AI
-    company_url: 'https://ai.meta.com/'
+  - position: Lecturer
+    company_name: Shandong University of Science and Technology
+    company_url: 'https://www.sdust.edu.cn'
     icon: ''
-    date_start: 2020-01-01
+    date_start: 2024-09-01
     date_end: ''
     summary: |2-
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
-  - position: AI Research Intern
-    company_name: OpenAI
-    company_url: 'https://openai.com/'
+      Leading research on multimodal AI systems.
+  - position: Visiting Researcher
+    company_name: Imperial College London
+    company_url: 'https://www.imperial.ac.uk'
     icon: ''
-    date_start: 2019-06-01
-    date_end: 2019-12-31
+    date_start: 2025-11-04
+    date_end: 2026-11-04
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      AI-driven techniques for imaging, biomedicine and biomedical data analysis with a strong emphasis on translational research.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -138,35 +136,35 @@ skills:
 languages:
   - name: English
     percent: 100
-  - name: Spanish
-    percent: 50
+  - name: Chinese
+    percent: 100
 
 # Awards.
 #   Add/remove as many awards below as you like.
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
-awards:
-  - title: Best Paper Award
-    url: https://neurips.cc/
-    date: '2022-12-01'
-    awarder: NeurIPS
-    icon: hero/trophy
-    summary: |
-      Awarded for groundbreaking work on efficient training of large models.
-  - title: AI Innovation Grant
-    url: https://www.nsf.gov/
-    date: '2021-06-15'
-    awarder: National Science Foundation
-    icon: hero/currency-dollar
-    summary: |
-      $500,000 grant for research in ethical AI development.
-  - title: Outstanding PhD Thesis
-    url: https://www.stanford.edu/
-    date: '2019-06-30'
-    awarder: Stanford University
-    icon: hero/academic-cap
-    summary: |
-      Recognized for contributions to scaling laws in deep learning.
+# awards:
+#   - title: Best Paper Award
+#     url: https://neurips.cc/
+#     date: '2022-12-01'
+#     awarder: NeurIPS
+#     icon: hero/trophy
+#     summary: |
+#       Awarded for groundbreaking work on efficient training of large models.
+#   - title: AI Innovation Grant
+#     url: https://www.nsf.gov/
+#     date: '2021-06-15'
+#     awarder: National Science Foundation
+#     icon: hero/currency-dollar
+#     summary: |
+#       $500,000 grant for research in ethical AI development.
+#   - title: Outstanding PhD Thesis
+#     url: https://www.stanford.edu/
+#     date: '2019-06-30'
+#     awarder: Stanford University
+#     icon: hero/academic-cap
+#     summary: |
+#       Recognized for contributions to scaling laws in deep learning.
 ---
 
-Alex Johnson is a Senior AI Research Scientist at Meta AI, where he leads groundbreaking work on large language models and multimodal systems. His research has been published in top conferences like NeurIPS and ICML, with over 10,000 citations. Alex is passionate about pushing the boundaries of AI while ensuring ethical development. Outside of work, he enjoys hiking in the Rockies, building custom PCs, and mentoring the next generation of AI talent.
+Jindong Sun, PhD, Shandong University of Science and Technology. In the past four years, he has published 6 SCI papers as first/corresponding author (including co-authors), which have been cited over 350 times, and more than 10 other SCI papers. His main research interests are segmentation and image reconstruction of brain tumors, using artificial intelligence methods to perform pathological segmentation of brain tumors from 3D data such as CT and MRI, determine the tumor life cycle status, and reconstruct brain images using fast MRI. His latest research, in collaboration with Professor Lei Sun's research group at Shandong University, uses 29 weeks of RfxCas13d data to design the deep learning method SCALPEL to accurately predict the targeting effects of gRNA biomarkers. He has designed and completed a series of rich biological experiments to design highly efficient viral targeting gRNAs and gene editing targeting effects, providing inspiration for drug design.
