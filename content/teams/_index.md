@@ -1,5 +1,5 @@
 ---
-title: 'Projects'
+title: 'Teams'
 date: 2024-05-19
 type: landing
 
