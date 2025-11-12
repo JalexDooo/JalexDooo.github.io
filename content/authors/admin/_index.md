@@ -36,7 +36,7 @@ profiles:
   - icon: at-symbol
     url: jdsun@sdust.edu.cn
     label: E-mail Me
-  - icon: brands/weichat
+  - icon: brands/weixin
     url: https://github.com/JalexDooo
   - icon: brands/x
     url: https://twitter.com/JontySun13756
