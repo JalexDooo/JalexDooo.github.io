@@ -1,5 +1,5 @@
 ---
-title: 🎉 Our new research - SCALPEL Specific CRISPR-Cas13d gRNA design through deep Learning Prediction using in vivo ExperimentaL RNA structure and binding information
+title: 🎉 Our new research
 summary: Deciphering cellular context for efficient and cell type-specific CRISPR-Cas13d gRNA design using in vivo RNA structure and deep learning!
 date: 2025-5-27
 
