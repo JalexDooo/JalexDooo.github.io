@@ -46,8 +46,8 @@ profiles:
     url: https://www.linkedin.com/in/jindong-sun-2095a5347/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=91rGZecAAAAJ&hl=en
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0003-2288-4348
+  # - icon: academicons/orcid
+  #   url: https://orcid.org/0000-0003-2288-4348
 
 interests:
   - Medical Image Analysis
@@ -136,10 +136,11 @@ skills:
         icon: book-open
 
 languages:
-  - name: English
-    percent: 100
   - name: Chinese
     percent: 100
+  - name: English
+    percent: 70
+
 
 # Awards.
 #   Add/remove as many awards below as you like.
