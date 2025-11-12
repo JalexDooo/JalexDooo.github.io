@@ -18,19 +18,21 @@ tags:
 content_meta:
   trending: true
 ---
-<span class="inline-links">
-<!-- <p align="left"> -->
-  <a href="https://github.com/JalexDooo/SCALPEL">
+
+<p align="left">
+  <a href="https://github.com/JalexDooo/SCALPEL" style="display:inline; margin-right:.5rem; padding:0; line-height:1.2">
     <img src="https://img.shields.io/badge/SCAPEL-python-orange">
-  </a><a href="https://github.com/JalexDooo/SCALPEL/network/members">
+  </a>
+  <a href="https://github.com/JalexDooo/SCALPEL/network/members" style="display:inline; margin-right:.5rem; padding:0; line-height:1.2">
     <img src="https://img.shields.io/github/forks/JalexDooo/SCALPEL">
-  </a><a href="https://github.com/JalexDooo/SCALPEL/issues">
+  </a>
+  <a href="https://github.com/JalexDooo/SCALPEL/issues" style="display:inline; margin-right:.5rem; padding:0; line-height:1.2">
     <img src="https://img.shields.io/github/issues/JalexDooo/SCALPEL">
-  </a><a href="https://github.com/JalexDooo/SCALPEL/blob/master/LICENSE">
+  </a>
+  <a href="https://github.com/JalexDooo/SCALPEL/blob/master/LICENSE" style="display:inline; margin-right:.5rem; padding:0; line-height:1.2">
     <img src="https://img.shields.io/github/license/JalexDooo/SCALPEL">
   </a>
-</span>
-<!-- </p> -->
+</p>
 
 ## 🧬 SCALPEL: S͎pecific CRISPR-C͎as13d gRNA͎ design through deep L͎earning P͎rediction using *in vivo* E͎xperimentaL͎ RNA structure and binding information
 
