@@ -34,10 +34,10 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: jdsun@sdust.edu.cn
+    url: 'mailto:jdsun@sdust.edu.cn'
     label: E-mail Me
-  - icon: brands/weixin
-    url: https://github.com/JalexDooo
+  # - icon: brands/weixin
+  #   url: https://github.com/JalexDooo
   - icon: brands/x
     url: https://twitter.com/JontySun13756
   - icon: brands/github
