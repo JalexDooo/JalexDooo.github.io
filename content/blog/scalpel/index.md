@@ -35,18 +35,9 @@ content_meta:
   <a href="https://github.com/JalexDooo/SCALPEL/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/JalexDooo/SCALPEL">
   </a>
-  <!-- <a href="https://zenodo.org/badge/latestdoi/626892172">
-    <img src="https://zenodo.org/badge/626892172.svg" alt="DOI">
-  </a> -->
 </p>
 
-# 🧬 SCALPEL: S͎pecific CRISPR-C͎as13d gRNA͎ design through deep L͎earning P͎rediction using *in vivo* E͎xperimentaL͎ RNA structure and binding information
-
-
-
-**Official Implementation of SCALPEL – Deciphering cellular context for efficient and cell type-specific CRISPR-Cas13d gRNA design using *in vivo* RNA structure and deep learning**
-
-![SCALPEL Architecture](https://github.com/JalexDooo/SCALPEL/Figs/model.png)
+## 🧬 SCALPEL: S͎pecific CRISPR-C͎as13d gRNA͎ design through deep L͎earning P͎rediction using *in vivo* E͎xperimentaL͎ RNA structure and binding information
 
 ## 📖 Abstract
 The efficacy and tissue specificity of RNA therapeutics are critical for clinical translation. Here, by large-scale profiling of the dynamic RNA structurome across four cell lines, we systematically characterized the impact of **_in vivo_ target RNA structure** and **RNA-protein interactions** on CRISPR/Cas13d gRNA activity. We identified the structural patterns of high-efficacy gRNA targets and observed that structural differences can lead to variations in efficacy across different cellular contexts. By stabilizing single-stranded structure, RNA-binding proteins also enhanced gRNA efficacy.
@@ -96,7 +87,7 @@ python3 -u logicArchi.py val --gpu_ids=[0] --model_des='seq_bert_fold_mfe1_mfe2_
 ## 📊 Results
 
 <p align="center">
-  <img src="https://github.com/JalexDooo/SCALPEL/Figs/res1.jpg" alt="Fig.1" width="350"/>
+  <img src="https://github.com/JalexDooo/SCALPEL/tree/main/Figs/res1.jpg" alt="Fig.1" width="350"/>
 </p>
 
 <p align="center">
@@ -104,7 +95,7 @@ python3 -u logicArchi.py val --gpu_ids=[0] --model_des='seq_bert_fold_mfe1_mfe2_
 </p>
 
 <p align="center">
-  <img src="https://github.com/JalexDooo/SCALPEL/Figs/res2.jpg" alt="Fig.2" width="500"/>
+  <img src="https://github.com/JalexDooo/SCALPEL/tree/main/Figs/res2.jpg" alt="Fig.2" width="500"/>
 </p>
 
 <p align="center">
