@@ -18,12 +18,10 @@ tags:
 content_meta:
   trending: true
 ---
-
-<p align="left">
+<span class="inline-links">
+<!-- <p align="left"> -->
   <a href="https://github.com/JalexDooo/SCALPEL">
     <img src="https://img.shields.io/badge/SCAPEL-python-orange">
-  </a><a href="https://github.com/JalexDooo/SCALPEL/stargazers">
-    <img src="https://img.shields.io/github/stars/JalexDooo/SCALPEL">
   </a><a href="https://github.com/JalexDooo/SCALPEL/network/members">
     <img src="https://img.shields.io/github/forks/JalexDooo/SCALPEL">
   </a><a href="https://github.com/JalexDooo/SCALPEL/issues">
@@ -31,11 +29,12 @@ content_meta:
   </a><a href="https://github.com/JalexDooo/SCALPEL/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/JalexDooo/SCALPEL">
   </a>
-</p>
+</span>
+<!-- </p> -->
 
 ## 🧬 SCALPEL: S͎pecific CRISPR-C͎as13d gRNA͎ design through deep L͎earning P͎rediction using *in vivo* E͎xperimentaL͎ RNA structure and binding information
 
-## 📖 Abstract
+### 📖 Abstract
 The efficacy and tissue specificity of RNA therapeutics are critical for clinical translation. Here, by large-scale profiling of the dynamic RNA structurome across four cell lines, we systematically characterized the impact of **_in vivo_ target RNA structure** and **RNA-protein interactions** on CRISPR/Cas13d gRNA activity. We identified the structural patterns of high-efficacy gRNA targets and observed that structural differences can lead to variations in efficacy across different cellular contexts. By stabilizing single-stranded structure, RNA-binding proteins also enhanced gRNA efficacy.
 
  Leveraging this cell context information, along with approximately 290,000 RfxCas13d screening data, we developed SCALPEL, a deep learning model that predicts gRNA performance across various cellular environments. SCALPEL integrates:
@@ -46,7 +45,7 @@ The efficacy and tissue specificity of RNA therapeutics are critical for clinica
 
 SCALPEL significantly outperforms existing models, and, most importantly, enables **cell type-specific prediction** of gRNA activity. Validation screens across multiple cell lines demonstrate that cellular context significantly influences gRNA performance, even for identical targeting sequences, underscoring the feasibility of **cell type-specific knockdown** by targeting structural dynamic regions. SCALPEL can also facilitate designing highly efficient virus-targeting gRNAs and gRNAs that robustly knockdown maternal transcripts essential for early zebrafish development. Our method offers a novel approach to develop context-specific gRNAs, with potential to advance **tissue-** or **organ-specific** RNA therapies.
 
-## 🧠 Key Features
+### 🧠 Key Features
 
 
 - 🧬 Integrating *in vivo* RNA secondary structure data and cell type-specific RBP binding profile
@@ -55,7 +54,7 @@ SCALPEL significantly outperforms existing models, and, most importantly, enable
 - 🎯 Assist in designing high-specificity gRNAs for different cellular context
 - 🔬 Facilitate the design of gRNAs for animal models
 
-## ⚙️ Environment Setup && 🚀 Quick Start
+### ⚙️ Environment Setup && 🚀 Quick Start
 
 **Step 0**: Download the pre-trained BERT model at <a href="https://drive.google.com/drive/folders/1UfnmEOYFOm4fY8975KfVqlVn0kRP59fo?usp=drive_link" target="_blank" rel="noopener noreferrer">Google Drive</a>. Putting them in root directory.
 
@@ -81,7 +80,7 @@ python3 -u logicArchi.py val --gpu_ids=[0] --model_des='seq_bert_fold_mfe1_mfe2_
 ```
 
 
-## 🙏 Acknowledgements
+### 🙏 Acknowledgements
 
 We sincerely thank the following contributors and institutions for their support:
 
@@ -96,7 +95,7 @@ We sincerely thank the following contributors and institutions for their support
 
 Special thanks to all community members and beta testers who provided feedback during model development and validation in Sunlab.
 
-## 📚 Related Publication
+### 📚 Related Publication
 
 [1] Cheng, Xiaolong, et al. "Modeling CRISPR-Cas13d on-target and off-target effects using machine learning approaches." *Nature communications* 14.1 (2023): 752.
 
@@ -108,7 +107,7 @@ Special thanks to all community members and beta testers who provided feedback d
 
 [5] Yin, Weijie, et al. "Ernie-rna: An rna language model with structure-enhanced representations." bioRxiv (2024): 2024-03.
 
-## 🧾 Citation
+### 🧾 Citation
 
 If you use this work in your research, please cite:
 ```
@@ -121,7 +120,7 @@ If you use this work in your research, please cite:
 }
 ```
 
-## 📄 License
+### 📄 License
 This project is covered under the **MIT License**.
 
 Thank you for using SCALPEL! Any questions, suggestions or advice are welcome!
