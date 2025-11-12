@@ -26,15 +26,15 @@ content_meta:
   <a href="https://github.com/JalexDooo/SCALPEL/network/members">
     <img src="https://img.shields.io/github/forks/JalexDooo/SCALPEL">
   </a>
-  <a href="https://github.com/JalexDooo/SCALPEL/issues">
+  <!-- <a href="https://github.com/JalexDooo/SCALPEL/issues">
     <img src="https://img.shields.io/github/issues/JalexDooo/SCALPEL">
   </a>
   <a href="https://github.com/JalexDooo/SCALPEL/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/JalexDooo/SCALPEL">
-  </a>
+  </a> -->
 </p>
 
-## 🧬 SCALPEL: S͎pecific CRISPR-C͎as13d gRNA͎ design through deep L͎earning P͎rediction using *in vivo* E͎xperimentaL͎ RNA structure and binding information
+## 🧬 [SCALPEL: S͎pecific CRISPR-C͎as13d gRNA͎ design through deep L͎earning P͎rediction using *in vivo* E͎xperimentaL͎ RNA structure and binding information](https://github.com/JalexDooo/SCALPEL)
 
 ### 📖 Abstract
 The efficacy and tissue specificity of RNA therapeutics are critical for clinical translation. Here, by large-scale profiling of the dynamic RNA structurome across four cell lines, we systematically characterized the impact of **_in vivo_ target RNA structure** and **RNA-protein interactions** on CRISPR/Cas13d gRNA activity. We identified the structural patterns of high-efficacy gRNA targets and observed that structural differences can lead to variations in efficacy across different cellular contexts. By stabilizing single-stranded structure, RNA-binding proteins also enhanced gRNA efficacy.
