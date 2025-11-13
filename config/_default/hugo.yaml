@@ -6,7 +6,8 @@
 # Website name
 title: SunLab
 # Website URL
-baseURL: 'https://jalexdooo.github.io/#news'
+# baseURL: 'https://jalexdooo.github.io/#news'
+baseURL : 'https://www.jdsun-lab.cn/#news'
 
 ############################
 ## LANGUAGE
