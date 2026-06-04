@@ -6,11 +6,10 @@ date: 2026-06-04
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: None #'Image credit: [**SCALPEL**](https://github.com/JalexDooo/SCALPEL)'
+  # caption: #'Image credit: [**SCALPEL**](https://github.com/JalexDooo/SCALPEL)'
 
 authors:
   - admin
-  - Suiru Lu
 
 tags:
   - Life
