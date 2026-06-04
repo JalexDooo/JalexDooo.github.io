@@ -1,0 +1,35 @@
+<script>
+  (function () {
+    function isHome() {
+      var p = location.pathname.replace(/index\.html$/, '');
+      return p === '/' || p === '';
+    }
+    function isPublications() {
+      return location.pathname.replace(/\/$/, '') === '/publications';
+    }
+    function run() {
+      // Homepage: hide the Education section in the biography block.
+      if (isHome()) {
+        document.querySelectorAll('h3').forEach(function (h) {
+          if (h.textContent.trim() === 'Education') {
+            var section = h.closest('.mb-16');
+            if (section) section.style.display = 'none';
+          }
+        });
+      }
+      // Publications page: hide the "Publications" page title.
+      if (isPublications()) {
+        var h1 = document.querySelector('h1');
+        if (h1) {
+          var wrapper = h1.closest('article') || h1;
+          wrapper.style.display = 'none';
+        }
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+  })();
+</script>

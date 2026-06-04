@@ -14,10 +14,6 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: ''
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Home Page
-        url: https://github.com/JalexDooo  #https://znzb.sdust.edu.cn/info/1083/4565.htm
       headings:
         about: ''
         education: ''
@@ -29,16 +25,6 @@ sections:
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
-  - block: markdown
-    content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        Our research focuses on medical image processing and computational biology, including 3D brain tissue analysis, medical image generation, and RNA-RBP interaction prediction. 
-
-        Please reach out to collaborate 😃
-    design:
-      columns: '1'
   - block: cta-card
     demo: true # Only display this section in the Hugo Blox Builder demo site
     content:
