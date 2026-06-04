@@ -109,12 +109,9 @@
     function hdBanner() {
       var img = document.querySelector('.featured-image-wrapper img, img.featured-image');
       if (!img) return;
-      var src = img.getAttribute('src') || '';
-      var m = src.match(/^(.*\/)([^/]+)_hu_[0-9a-f]+\.\w+$/);
-      if (!m) return;
-      var dir = m[1];
-      var base = m[2];
-      var candidates = [base + '.png', base + '.jpg', base + '.jpeg', base + '.webp'];
+      var dir = location.pathname.replace(/[^/]*$/, '');
+      if (!/\/$/.test(dir)) dir += '/';
+      var candidates = ['featured.png', 'featured.jpg', 'featured.jpeg', 'featured.webp'];
       var i = 0;
       (function tryNext() {
         if (i >= candidates.length) return;
