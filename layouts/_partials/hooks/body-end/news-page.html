@@ -93,14 +93,13 @@
     padding: 3rem 0;
   }
 
-  /* Tone down the oversized lg:prose-xl body text on blog posts. */
+  /* Tone down the oversized lg:prose-xl body text on blog posts.
+     The theme's prose-xl modifier sets the base size with high weight,
+     so override with !important. Headings use em units and scale from this base. */
   body.blog-post .prose {
-    font-size: 1.05rem;
-    line-height: 1.75;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
   }
-  body.blog-post .prose h1 { font-size: 1.9rem; }
-  body.blog-post .prose h2 { font-size: 1.5rem; }
-  body.blog-post .prose h3 { font-size: 1.25rem; }
 </style>
 <script>
   (function () {
