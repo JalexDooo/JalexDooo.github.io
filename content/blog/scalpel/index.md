@@ -6,7 +6,7 @@ date: 2025-11-12
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: 'Image credit: [**SCALPEL**](https://github.com/JalexDooo/SCALPEL)'
+  caption: '[**SCALPEL**](https://github.com/JalexDooo/SCALPEL)'
 
 authors:
   - admin
