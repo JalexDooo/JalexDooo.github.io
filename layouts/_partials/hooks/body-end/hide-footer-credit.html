@@ -1,0 +1,25 @@
+<script>
+  (function () {
+    function hideCredit() {
+      var footer = document.querySelector('footer');
+      if (!footer) return;
+      var links = footer.querySelectorAll('a[href*="hugoblox"], a[href*="getresearch"], a[href*="wowchemy"]');
+      links.forEach(function (a) {
+        var node = a;
+        while (
+          node.parentElement &&
+          node.parentElement !== footer &&
+          node.parentElement.querySelectorAll('a').length <= 2
+        ) {
+          node = node.parentElement;
+        }
+        node.style.display = 'none';
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', hideCredit);
+    } else {
+      hideCredit();
+    }
+  })();
+</script>
