@@ -13,14 +13,16 @@
 <script>
   (function () {
     function wrapAvatar() {
-      var avatar = document.querySelector('img[src*="avatar"]');
-      if (!avatar || avatar.closest('.avatar-experience-link')) return;
-      var link = document.createElement('a');
-      link.href = '/experience/';
-      link.className = 'avatar-experience-link';
-      link.setAttribute('aria-label', 'View my experience');
-      avatar.parentNode.insertBefore(link, avatar);
-      link.appendChild(avatar);
+      var avatars = document.querySelectorAll('img[src*="avatar"]');
+      avatars.forEach(function (avatar) {
+        if (avatar.closest('.avatar-experience-link')) return;
+        var link = document.createElement('a');
+        link.href = '/experience/';
+        link.className = 'avatar-experience-link';
+        link.setAttribute('aria-label', 'View my experience');
+        avatar.parentNode.insertBefore(link, avatar);
+        link.appendChild(avatar);
+      });
     }
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', wrapAvatar);

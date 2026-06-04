@@ -21,6 +21,11 @@
       });
     }
 
+    function hideHomeFooter() {
+      var footer = document.querySelector('.page-footer') || document.querySelector('footer');
+      if (footer) footer.style.display = 'none';
+    }
+
     function hidePublicationsTitle() {
       var h1 = document.querySelector('h1');
       if (h1) {
@@ -85,7 +90,7 @@
     }
 
     function run() {
-      if (isHome()) hideHomeEducation();
+      if (isHome()) { hideHomeEducation(); hideHomeFooter(); }
       if (isPublications()) hidePublicationsTitle();
       if (isPublicationsRoot()) setupInfiniteScroll();
     }
