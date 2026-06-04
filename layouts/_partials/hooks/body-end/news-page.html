@@ -1,13 +1,16 @@
 <style>
   body.news-page .news-grid {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     gap: 1.75rem;
   }
   body.news-page .news-card {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
     align-items: stretch;
+  }
+  body.news-page .news-card.news-card-hidden {
+    display: none;
   }
   body.news-page .news-card > :first-child {
     flex: 0 0 40%;
@@ -98,6 +101,34 @@
     function isBlogRoot() {
       return location.pathname.replace(/\/$/, '') === '/blog';
     }
+    function isBlogPost() {
+      return /^\/blog\/(?!page\/)[^/]+\/?$/.test(location.pathname);
+    }
+
+    // Swap the theme's downscaled featured banner for the full-resolution original.
+    function hdBanner() {
+      var img = document.querySelector('.featured-image-wrapper img, img.featured-image');
+      if (!img) return;
+      var src = img.getAttribute('src') || '';
+      var m = src.match(/^(.*\/)([^/]+)_hu_[0-9a-f]+\.\w+$/);
+      if (!m) return;
+      var dir = m[1];
+      var base = m[2];
+      var candidates = [base + '.png', base + '.jpg', base + '.jpeg', base + '.webp'];
+      var i = 0;
+      (function tryNext() {
+        if (i >= candidates.length) return;
+        var url = dir + candidates[i++];
+        var probe = new Image();
+        probe.onload = function () {
+          img.removeAttribute('srcset');
+          img.removeAttribute('sizes');
+          img.src = url;
+        };
+        probe.onerror = tryNext;
+        probe.src = url;
+      })();
+    }
     function cardDate(c) {
       var t = c.querySelector('time[datetime]');
       return t ? t.getAttribute('datetime') : '';
@@ -158,7 +189,7 @@
         var any = false;
         cards.forEach(function (c) {
           var show = slug === 'all' || cardSlug(c) === slug;
-          c.style.display = show ? '' : 'none';
+          c.classList.toggle('news-card-hidden', !show);
           if (show) any = true;
         });
         empty.style.display = any ? 'none' : '';
@@ -178,6 +209,7 @@
     function run() {
       if (isBlog()) hideTitle();
       if (isBlogRoot()) enhance();
+      if (isBlogPost()) hdBanner();
     }
 
     if (document.readyState === 'loading') {
