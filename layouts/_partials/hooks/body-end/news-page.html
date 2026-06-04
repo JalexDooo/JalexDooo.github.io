@@ -1,0 +1,189 @@
+<style>
+  body.news-page .news-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+  body.news-page .news-card {
+    display: flex !important;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  body.news-page .news-card > :first-child {
+    flex: 0 0 40%;
+    max-width: 40%;
+    aspect-ratio: auto;
+    min-height: 11rem;
+  }
+  body.news-page .news-card > :first-child img {
+    object-fit: cover !important;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+  }
+  body.news-page .news-card > :last-child {
+    flex: 1 1 auto;
+  }
+  @media (max-width: 767px) {
+    body.news-page .news-card {
+      flex-direction: column;
+    }
+    body.news-page .news-card > :first-child {
+      flex-basis: auto;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      min-height: 0;
+    }
+  }
+
+  .news-cat-nav {
+    display: none;
+  }
+  @media (min-width: 1280px) {
+    .news-cat-nav {
+      display: block;
+      position: fixed;
+      top: 7rem;
+      right: 1.5rem;
+      width: 11rem;
+      z-index: 20;
+      font-size: 0.875rem;
+    }
+  }
+  .news-cat-nav .news-cat-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+  }
+  .news-cat-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .news-cat-nav li {
+    margin: 0.4rem 0;
+  }
+  .news-cat-nav a {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    color: #6b7280;
+    word-break: break-word;
+    transition: color 0.15s ease;
+  }
+  .news-cat-nav a:hover,
+  .news-cat-nav a.active {
+    color: #111827;
+    font-weight: 600;
+  }
+  .dark .news-cat-nav a {
+    color: #9ca3af;
+  }
+  .dark .news-cat-nav a:hover,
+  .dark .news-cat-nav a.active {
+    color: #e5e7eb;
+  }
+  .news-empty {
+    text-align: center;
+    color: #6b7280;
+    padding: 3rem 0;
+  }
+</style>
+<script>
+  (function () {
+    function isBlog() {
+      return /^\/blog(\/(page\/\d+\/?)?)?$/.test(location.pathname);
+    }
+    function isBlogRoot() {
+      return location.pathname.replace(/\/$/, '') === '/blog';
+    }
+    function cardDate(c) {
+      var t = c.querySelector('time[datetime]');
+      return t ? t.getAttribute('datetime') : '';
+    }
+    function cardSlug(c) {
+      var a = c.querySelector('a[href*="/tags/"]');
+      if (!a) return '';
+      var m = a.getAttribute('href').match(/\/tags\/([^/]+)/);
+      return m ? m[1].toLowerCase() : '';
+    }
+
+    function hideTitle() {
+      var h1 = document.querySelector('h1');
+      if (h1) (h1.closest('article') || h1).style.display = 'none';
+    }
+
+    function enhance() {
+      var cards = [].slice.call(document.querySelectorAll('[role=article]'));
+      if (!cards.length) return;
+      document.body.classList.add('news-page');
+
+      var grid = cards[0].parentElement;
+      grid.classList.add('news-grid');
+      var wrapper = grid.parentElement;
+      if (wrapper) wrapper.style.maxWidth = '56rem';
+      cards.forEach(function (c) { c.classList.add('news-card'); });
+
+      // Newest first.
+      cards.sort(function (a, b) { return cardDate(b).localeCompare(cardDate(a)); });
+      cards.forEach(function (c) { grid.appendChild(c); });
+
+      // Empty-state message.
+      var empty = document.createElement('div');
+      empty.className = 'news-empty';
+      empty.textContent = 'No posts in this category yet.';
+      empty.style.display = 'none';
+      grid.parentNode.insertBefore(empty, grid.nextSibling);
+
+      // Category sidebar.
+      var cats = [
+        ['all', 'All'],
+        ['academic', 'Academic'],
+        ['life', 'Life'],
+        ['courses', 'Courses']
+      ];
+      var nav = document.createElement('nav');
+      nav.className = 'news-cat-nav';
+      nav.setAttribute('aria-label', 'categories');
+      var html = '<p class="news-cat-title">Categories</p><ul>';
+      cats.forEach(function (c) {
+        html += '<li><a data-slug="' + c[0] + '">' + c[1] + '</a></li>';
+      });
+      html += '</ul>';
+      nav.innerHTML = html;
+      document.body.appendChild(nav);
+
+      function applyFilter(slug) {
+        var any = false;
+        cards.forEach(function (c) {
+          var show = slug === 'all' || cardSlug(c) === slug;
+          c.style.display = show ? '' : 'none';
+          if (show) any = true;
+        });
+        empty.style.display = any ? 'none' : '';
+        nav.querySelectorAll('a').forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('data-slug') === slug);
+        });
+      }
+
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          applyFilter(a.getAttribute('data-slug'));
+        });
+      });
+      applyFilter('all');
+    }
+
+    function run() {
+      if (isBlog()) hideTitle();
+      if (isBlogRoot()) enhance();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+  })();
+</script>
