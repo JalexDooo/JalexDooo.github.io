@@ -5,27 +5,91 @@
       return p === '/' || p === '';
     }
     function isPublications() {
-      return location.pathname.replace(/\/$/, '') === '/publications';
+      return /^\/publications(\/(page\/\d+\/?)?)?$/.test(location.pathname);
     }
-    function run() {
-      // Homepage: hide the Education section in the biography block.
-      if (isHome()) {
-        document.querySelectorAll('h3').forEach(function (h) {
-          if (h.textContent.trim() === 'Education') {
-            var section = h.closest('.mb-16');
-            if (section) section.style.display = 'none';
-          }
+    function isPublicationsRoot() {
+      var p = location.pathname.replace(/\/$/, '');
+      return p === '/publications';
+    }
+
+    function hideHomeEducation() {
+      document.querySelectorAll('h3').forEach(function (h) {
+        if (h.textContent.trim() === 'Education') {
+          var section = h.closest('.mb-16');
+          if (section) section.style.display = 'none';
+        }
+      });
+    }
+
+    function hidePublicationsTitle() {
+      var h1 = document.querySelector('h1');
+      if (h1) {
+        var wrapper = h1.closest('article') || h1;
+        wrapper.style.display = 'none';
+      }
+    }
+
+    function setupInfiniteScroll() {
+      var firstItem = document.querySelector('.pub-list-item');
+      if (!firstItem) return;
+      var container = firstItem.parentElement;
+
+      // Hide the server-rendered pagination control.
+      var pageLink = document.querySelector('a.page-link');
+      var nav = pageLink && pageLink.closest('nav');
+      if (nav) nav.style.display = 'none';
+
+      var nextPage = 2;
+      var loading = false;
+      var done = false;
+
+      var sentinel = document.createElement('div');
+      sentinel.style.height = '1px';
+      container.parentNode.insertBefore(sentinel, container.nextSibling);
+
+      function inViewport(el) {
+        var r = el.getBoundingClientRect();
+        return r.top <= (window.innerHeight || document.documentElement.clientHeight) + 400;
+      }
+
+      function loadMore() {
+        if (loading || done) return;
+        loading = true;
+        fetch('/publications/page/' + nextPage + '/')
+          .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+          .then(function (html) {
+            var doc = new DOMParser().parseFromString(html, 'text/html');
+            var items = doc.querySelectorAll('.pub-list-item');
+            if (!items.length) { done = true; return; }
+            items.forEach(function (it) {
+              container.appendChild(document.importNode(it, true));
+            });
+            nextPage++;
+            loading = false;
+            // Keep loading if the sentinel is still near the viewport.
+            if (inViewport(sentinel)) loadMore();
+          })
+          .catch(function () { done = true; });
+      }
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) loadMore(); });
+        }, { rootMargin: '400px' });
+        io.observe(sentinel);
+      } else {
+        window.addEventListener('scroll', function () {
+          if (inViewport(sentinel)) loadMore();
         });
       }
-      // Publications page: hide the "Publications" page title.
-      if (isPublications()) {
-        var h1 = document.querySelector('h1');
-        if (h1) {
-          var wrapper = h1.closest('article') || h1;
-          wrapper.style.display = 'none';
-        }
-      }
     }
+
+    function run() {
+      if (isHome()) hideHomeEducation();
+      if (isPublications()) hidePublicationsTitle();
+      if (isPublicationsRoot()) setupInfiniteScroll();
+    }
+
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', run);
     } else {
