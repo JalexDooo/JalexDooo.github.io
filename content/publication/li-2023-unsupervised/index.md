@@ -7,7 +7,7 @@ authors:
 - J Sun
 - Y Guo
 date: '2023-01-01'
-publishDate: '2026-06-29T17:07:45.208061Z'
+publishDate: '2026-06-29T17:13:58.256376Z'
 publication_types:
 - article-journal
 publication: '*Medical & biological engineering & computing 61 (10), 2713-2732*'

@@ -6,7 +6,7 @@ authors:
 - Y Guo
 - J Sun
 date: '2022-01-01'
-publishDate: '2026-06-29T17:07:45.249661Z'
+publishDate: '2026-06-29T17:13:58.297880Z'
 publication_types:
 - article-journal
 publication: '*IET Image Processing 16 (4), 1227-1242*'

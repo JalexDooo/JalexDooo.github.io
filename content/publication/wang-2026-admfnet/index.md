@@ -7,7 +7,7 @@ authors:
 - Xinjun An
 - Liying Zhu
 date: '2026-01-01'
-publishDate: '2026-06-29T17:07:45.170572Z'
+publishDate: '2026-06-29T17:13:58.218576Z'
 publication_types:
 - article-journal
 publication: '*In: Bakas, S., et al. Segmentation, Classification, and Synthesis for

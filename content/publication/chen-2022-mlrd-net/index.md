@@ -9,7 +9,7 @@ authors:
 - D Li
 - J Cui
 date: '2022-01-01'
-publishDate: '2026-06-29T17:07:45.228883Z'
+publishDate: '2026-06-29T17:13:58.277068Z'
 publication_types:
 - article-journal
 publication: '*Medical & Biological Engineering & Computing 60 (12), 3377-3395*'

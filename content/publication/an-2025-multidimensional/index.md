@@ -8,7 +8,7 @@ authors:
 - J Jiang
 - Y Peng
 date: '2025-01-01'
-publishDate: '2026-06-29T17:07:45.180153Z'
+publishDate: '2026-06-29T17:13:58.227943Z'
 publication_types:
 - article-journal
 publication: '*Journal of Imaging Informatics in Medicine, 1-15*'

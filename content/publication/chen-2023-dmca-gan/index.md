@@ -7,7 +7,7 @@ authors:
 - D Li
 - J Sun
 date: '2023-01-01'
-publishDate: '2026-06-29T17:07:45.194055Z'
+publishDate: '2026-06-29T17:13:58.242564Z'
 publication_types:
 - article-journal
 publication: '*Journal of Digital Imaging 36 (6), 2532-2553*'

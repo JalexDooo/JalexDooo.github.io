@@ -8,7 +8,7 @@ authors:
 - D Li
 - J Sun
 date: '2021-01-01'
-publishDate: '2026-06-29T17:07:45.256675Z'
+publishDate: '2026-06-29T17:13:58.304673Z'
 publication_types:
 - article-journal
 publication: '*3D Head and Neck Tumor Segmentation in PET/CT Challenge, 38-49*'
