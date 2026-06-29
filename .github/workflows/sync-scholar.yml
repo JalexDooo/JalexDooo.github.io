@@ -44,16 +44,17 @@ jobs:
 
       - name: Regenerate publication pages (full replace)
         run: |
+          # The visible "Papers" section is content/publications/ (plural).
           # Remove existing entry folders but keep the section's _index.md.
-          find content/publication -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
-          academic import publications.bib content/publication/ --compact --verbose
+          find content/publications -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
+          academic import publications.bib content/publications/ --compact --verbose
 
       - name: Commit changes
         id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add publications.bib content/publication
+          git add publications.bib content/publications
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No publication changes detected."
