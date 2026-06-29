@@ -77,3 +77,4 @@ Desktop.ini
 npm-debug.log*
 __pycache__/
 *.pyc
+new_publications.bib

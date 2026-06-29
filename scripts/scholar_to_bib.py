@@ -1,20 +1,22 @@
 #!/usr/bin/env python3
-"""Generate publications.bib from a Google Scholar profile via SerpAPI.
+"""Sync publications from a Google Scholar profile via SerpAPI (add-new-only).
 
 Google Scholar has no official API and blocks scraping from datacenter IPs
 (e.g. GitHub Actions runners), so we go through SerpAPI's Google Scholar Author
 endpoint, which returns the publication list reliably.
 
+Strategy: preserve hand-curated pages. We write the full library to OUTPUT for
+reference, but only emit entries whose (normalised) title is NOT already present
+under EXISTING_DIR to NEW_OUTPUT. The workflow imports NEW_OUTPUT only, so
+existing pages -- with their abstracts and featured images -- are left untouched.
+
 Environment variables:
   SERPAPI_KEY        SerpAPI API key (required, store as a GitHub secret)
   SCHOLAR_AUTHOR_ID  Google Scholar author id -- the `user=` value in your
-                     profile URL, e.g. for
-                     https://scholar.google.com/citations?user=ABCdEfG it is
-                     "ABCdEfG" (required)
-  OUTPUT             Output path (default: publications.bib)
-
-Note: Scholar exposes title / authors / venue / year / citation count / link,
-but usually NOT abstracts or DOIs, so generated entries are intentionally lean.
+                     profile URL (required)
+  OUTPUT             Full library bib path (default: publications.bib)
+  NEW_OUTPUT         New-entries-only bib path (default: new_publications.bib)
+  EXISTING_DIR       Dir of existing pages (default: content/publications)
 """
 
 import json
@@ -50,7 +52,6 @@ def fetch_articles(author_id, api_key):
         if not batch:
             break
         articles.extend(batch)
-        # Continue only while SerpAPI reports another page.
         if "next" not in (data.get("serpapi_pagination") or {}):
             break
         start += len(batch)
@@ -86,7 +87,12 @@ def slugify(text):
     return (re.sub(r"[^a-zA-Z0-9]+", "_", text).strip("_").lower() or "ref")[:40]
 
 
-def to_bibtex(article, used_keys):
+def normalize_title(title):
+    """Collapse a title to lowercase alphanumerics for robust matching."""
+    return re.sub(r"[^a-z0-9]+", "", (title or "").lower())
+
+
+def build_record(article, used_keys):
     title = (article.get("title") or "").strip()
     if not title:
         return None
@@ -115,29 +121,81 @@ def to_bibtex(article, used_keys):
         fields.append("\turl = {" + link + "}")
     if cited is not None:
         fields.append("\tnote = {Cited by " + str(cited) + "}")
-    return year, "@article{" + key + ",\n" + ",\n".join(fields) + ",\n}"
+    bibtex = "@article{" + key + ",\n" + ",\n".join(fields) + ",\n}"
+    return {"year": year, "title": title, "norm": normalize_title(title), "bibtex": bibtex}
+
+
+def parse_title(path):
+    """Read the `title:` value from a page's YAML front matter (handles folding)."""
+    try:
+        with open(path, encoding="utf-8") as fh:
+            lines = fh.read().splitlines()
+    except OSError:
+        return ""
+    if not lines or lines[0].strip() != "---":
+        return ""
+    parts, capturing = [], False
+    for line in lines[1:]:
+        if line.strip() == "---":
+            break
+        if capturing:
+            if re.match(r"^\S", line):  # next top-level key -> title ended
+                break
+            parts.append(line.strip())
+            continue
+        m = re.match(r"^title:\s*(.*)$", line)
+        if m:
+            parts.append(m.group(1).strip())
+            capturing = True
+    return " ".join(p for p in parts if p).strip()
+
+
+def existing_titles(directory):
+    """Normalised titles of every page already present in `directory`."""
+    found = set()
+    if not os.path.isdir(directory):
+        return found
+    for name in os.listdir(directory):
+        index = os.path.join(directory, name, "index.md")
+        if os.path.isfile(index):
+            norm = normalize_title(parse_title(index))
+            if norm:
+                found.add(norm)
+    return found
 
 
 def main():
     api_key = os.environ.get("SERPAPI_KEY")
     author_id = os.environ.get("SCHOLAR_AUTHOR_ID")
     out_path = os.environ.get("OUTPUT", "publications.bib")
+    new_path = os.environ.get("NEW_OUTPUT", "new_publications.bib")
+    existing_dir = os.environ.get("EXISTING_DIR", "content/publications")
     if not api_key or not author_id:
         sys.exit("SERPAPI_KEY and SCHOLAR_AUTHOR_ID environment variables are required")
 
     articles = fetch_articles(author_id, api_key)
     print("Fetched " + str(len(articles)) + " articles from Google Scholar")
 
-    used_keys, entries = set(), []
+    used_keys, records = set(), []
     for article in articles:
-        entry = to_bibtex(article, used_keys)
-        if entry:
-            entries.append(entry)
+        rec = build_record(article, used_keys)
+        if rec:
+            records.append(rec)
+    records.sort(key=lambda r: r["year"], reverse=True)  # newest first
 
-    entries.sort(key=lambda e: e[0], reverse=True)  # newest first
+    # Full library, for reference.
     with open(out_path, "w", encoding="utf-8") as fh:
-        fh.write("\n\n".join(text for _, text in entries) + "\n")
-    print("Wrote " + str(len(entries)) + " entries to " + out_path)
+        fh.write("\n\n".join(r["bibtex"] for r in records) + "\n")
+
+    # New-only: titles not already present as curated pages.
+    have = existing_titles(existing_dir)
+    new = [r for r in records if r["norm"] not in have]
+    with open(new_path, "w", encoding="utf-8") as fh:
+        fh.write(("\n\n".join(r["bibtex"] for r in new) + "\n") if new else "")
+
+    print("Library: %d total, %d already present, %d new" % (len(records), len(have), len(new)))
+    for r in new:
+        print("  + NEW: " + r["title"])
 
 
 if __name__ == "__main__":

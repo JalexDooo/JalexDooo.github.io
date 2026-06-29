@@ -39,15 +39,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install "academic>=0.10.0"
 
-      - name: Fetch publications from Google Scholar
+      - name: Fetch publications from Google Scholar (new only)
         run: python scripts/scholar_to_bib.py
 
-      - name: Regenerate publication pages (full replace)
+      - name: Import only new publications (preserve curated pages)
         run: |
-          # The visible "Papers" section is content/publications/ (plural).
-          # Remove existing entry folders but keep the section's _index.md.
-          find content/publications -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
-          academic import publications.bib content/publications/ --compact --verbose
+          # Add-only: existing pages (with abstracts/images) are left untouched;
+          # we import just the entries whose titles aren't already present.
+          if [ -s new_publications.bib ]; then
+            academic import new_publications.bib content/publications/ --compact --verbose
+            echo "Imported new publications."
+          else
+            echo "No new publications to import."
+          fi
+          rm -f new_publications.bib
 
       - name: Commit changes
         id: commit
